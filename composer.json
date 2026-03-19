@@ -1,11 +1,11 @@
 {
     "name": "ecourty/presidio-client",
-    "description": "A PHP client library for Microsoft Presidio — detect and anonymize PII in text via the Presidio REST API.",
+    "description": "A PHP client for Microsoft Presidio — detect and anonymize PII in text via Presidio's REST APIs.",
     "type": "library",
     "keywords": ["presidio", "pii", "anonymization", "privacy", "gdpr", "text", "nlp"],
     "require": {
         "php": ">=8.3",
-        "symfony/http-client": "^6.4 || ^7.0"
+        "symfony/http-client": "^6.4 || ^7.0 || ^8.0"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.71",
