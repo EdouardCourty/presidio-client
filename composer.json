@@ -1,0 +1,52 @@
+{
+    "name": "ecourty/presidio-client",
+    "description": "A PHP client library for Microsoft Presidio — detect and anonymize PII in text via the Presidio REST API.",
+    "type": "library",
+    "keywords": ["presidio", "pii", "anonymization", "privacy", "gdpr", "text", "nlp"],
+    "require": {
+        "php": ">=8.3",
+        "symfony/http-client": "^6.4 || ^7.0"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.71",
+        "phpstan/phpstan": "^2.1",
+        "phpunit/phpunit": "^12.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Ecourty\\PresidioClient\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Ecourty\\PresidioClient\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Edouard Courty",
+            "email": "edouard.courty2@gmail.com",
+            "homepage": "https://github.com/EdouardCourty"
+        }
+    ],
+    "scripts": {
+        "test": "phpunit tests",
+        "test-unit": "phpunit tests/Unit/",
+        "test-integration": "phpunit tests/Integration/",
+        "test-fast": "@test-unit",
+        "phpstan": "phpstan analyse --memory-limit=-1",
+        "cs-fix": "PHP_CS_FIXER_IGNORE_ENV=1 php-cs-fixer fix . --config .php-cs-fixer.php",
+        "cs-check": "PHP_CS_FIXER_IGNORE_ENV=1 php-cs-fixer fix . --config .php-cs-fixer.php --dry-run --diff",
+        "qa": [
+            "@phpstan",
+            "@cs-check",
+            "@test"
+        ]
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
