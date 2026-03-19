@@ -39,7 +39,7 @@ echo "Anonymized:  {$result->getText()}\n\n";
 
 echo "Detected entities:\n";
 foreach ($result->getItems() as $item) {
-    echo sprintf(
+    echo \sprintf(
         "  - %s: \"%s\" (position: %d-%d)\n",
         $item->getEntityType(),
         $item->getText(),

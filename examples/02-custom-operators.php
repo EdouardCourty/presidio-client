@@ -31,7 +31,7 @@ echo "Anonymized:  {$result->getText()}\n\n";
 
 echo "Applied operators:\n";
 foreach ($result->getItems() as $item) {
-    echo sprintf(
+    echo \sprintf(
         "  - %s → %s (operator: %s)\n",
         $item->getEntityType(),
         $item->getText(),

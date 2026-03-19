@@ -35,4 +35,4 @@ $deanonymized = $presidio->deanonymize(new DeanonymizeRequest(
 ));
 
 echo "Decrypted:   {$deanonymized->getText()}\n";
-echo "Round-trip OK: " . ($deanonymized->getText() === $text ? 'yes' : 'no') . "\n";
+echo 'Round-trip OK: ' . ($deanonymized->getText() === $text ? 'yes' : 'no') . "\n";
