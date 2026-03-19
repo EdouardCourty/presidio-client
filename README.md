@@ -18,6 +18,8 @@ composer require ecourty/presidio-client
 The `Presidio` facade is the simplest way to use the library — it combines both clients and provides convenience methods:
 
 ```php
+use Ecourty\PresidioClient\Client\PresidioAnalyzer;
+use Ecourty\PresidioClient\Client\PresidioAnonymizer;
 use Ecourty\PresidioClient\Presidio;
 
 // Use with default configuration (localhost:5001 for Analyzer, localhost:5002 for Anonymizer)
