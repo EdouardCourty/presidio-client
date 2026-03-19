@@ -7,9 +7,9 @@ namespace Ecourty\PresidioClient\Model;
 final readonly class AnonymizeRequest
 {
     /**
-     * @param string                         $text            The original text to anonymize
-     * @param list<AnalyzerResult>           $analyzerResults PII entities detected by the analyzer
-     * @param array<string, OperatorConfig>  $anonymizers     Operator config per entity type (key = entity type or "DEFAULT")
+     * @param string                        $text            The original text to anonymize
+     * @param list<AnalyzerResult>          $analyzerResults PII entities detected by the analyzer
+     * @param array<string, OperatorConfig> $anonymizers     Operator config per entity type (key = entity type or "DEFAULT")
      */
     public function __construct(
         private string $text,

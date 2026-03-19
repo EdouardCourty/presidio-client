@@ -8,8 +8,8 @@ final readonly class RecognizerResult
 {
     /**
      * @param string       $name               Recognizer name (e.g. "SpacyRecognizer", "EmailRecognizer")
-     * @param list<string> $supportedEntities   Entity types this recognizer can detect (e.g. ["PERSON", "LOCATION"])
-     * @param list<string> $supportedLanguages  Language codes this recognizer supports (e.g. ["en"])
+     * @param list<string> $supportedEntities  Entity types this recognizer can detect (e.g. ["PERSON", "LOCATION"])
+     * @param list<string> $supportedLanguages Language codes this recognizer supports (e.g. ["en"])
      */
     public function __construct(
         private string $name,
