@@ -1,5 +1,7 @@
 # Presidio Client for PHP
 
+[![PHP CI](https://github.com/EdouardCourty/presidio-client/actions/workflows/ci.yml/badge.svg)](https://github.com/EdouardCourty/presidio-client/actions/workflows/ci.yml)
+
 A typed PHP client for [Microsoft Presidio](https://github.com/microsoft/presidio) — detect and anonymize PII (Personally Identifiable Information) in text.
 
 ## Requirements
