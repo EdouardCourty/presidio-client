@@ -9,6 +9,7 @@ use Ecourty\PresidioClient\Model\AnalyzerRequest;
 use Ecourty\PresidioClient\Model\AnalyzerResult;
 use Ecourty\PresidioClient\Model\RecognizerResult;
 use Symfony\Component\HttpClient\HttpClient;
+use Symfony\Contracts\HttpClient\Exception\TransportExceptionInterface;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
 
 class PresidioAnalyzer
@@ -109,8 +110,12 @@ class PresidioAnalyzer
 
     public function health(): bool
     {
-        $response = $this->httpClient->request('GET', self::ENDPOINT_HEALTH);
+        try {
+            $response = $this->httpClient->request('GET', self::ENDPOINT_HEALTH);
 
-        return $response->getStatusCode() === self::HTTP_OK;
+            return $response->getStatusCode() === self::HTTP_OK;
+        } catch (TransportExceptionInterface) {
+            return false;
+        }
     }
 }
